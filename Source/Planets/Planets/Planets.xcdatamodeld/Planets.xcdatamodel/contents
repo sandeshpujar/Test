@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Planet" representedClassName="Planet" syncable="YES">
+        <attribute name="climate" optional="YES" attributeType="String"/>
+        <attribute name="dateCreated" optional="YES" attributeType="String"/>
+        <attribute name="dateEdited" optional="YES" attributeType="String"/>
+        <attribute name="diameter" optional="YES" attributeType="String"/>
+        <attribute name="films" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <attribute name="gravity" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="orbitalPeriod" optional="YES" attributeType="String"/>
+        <attribute name="population" optional="YES" attributeType="String"/>
+        <attribute name="residents" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <attribute name="rotationPeriod" optional="YES" attributeType="String"/>
+        <attribute name="surfaceWater" optional="YES" attributeType="String"/>
+        <attribute name="terrain" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Planets" representedClassName="Planets" syncable="YES">
+        <attribute name="count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="next" optional="YES" attributeType="String"/>
+        <attribute name="previous" optional="YES" attributeType="String"/>
+        <relationship name="allPlanets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Planet"/>
+    </entity>
+    <elements>
+        <element name="Planet" positionX="-54" positionY="-9" width="128" height="239"/>
+        <element name="Planets" positionX="-36" positionY="117" width="128" height="89"/>
+    </elements>
+</model>
